@@ -7,7 +7,8 @@ Simple API for receiving and providing data.
 1. Clone the repository.
 2. Run `docker-compose up -d` to start the containers.
 3. Run `docker-compose exec -it php-fpm composer install` to install dependencies.
-4. Run `docker-compose exec -it php-fpm php artisan migrate` to run migrations.
+4. Run `docker-compose exec -it php-fpm composer run-script post-create-project-cmd` to initialize project.
+5. Run `docker-compose exec -it php-fpm php artisan migrate` to run migrations.
 
 ## API Endpoints
 
