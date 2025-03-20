@@ -8,7 +8,7 @@ use App\Http\Controllers\Api\V1\SensorController;
 Route::group([
     'middleware' => 'throttle:60,1',
 ], function () {
-    Route::get('/', [SensorController::class, 'store']);
+    Route::post('/', [SensorController::class, 'store']);
     Route::get('/history', [SensorController::class, 'history']);
 });
 
